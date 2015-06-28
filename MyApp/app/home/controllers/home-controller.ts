@@ -8,14 +8,19 @@ module Home.Controllers {
     persons : Array<Home.Data.IPerson>;
     query: string;
 
-    public static $inject = ['$log'];
+    public static $inject = ['$log', '$location'];
 
     // dependencies are injected via AngularJS $injector
-    constructor(private $log : ng.ILogService) {
+    constructor(private $log : ng.ILogService, private $location : ng.ILocationService) {
       var vm = this;
       vm.ctrlName = 'HomeCtrl';
 
       this.$log.debug('home controller called');
+    }
+
+    showDetail(person : Home.Data.IPerson) {
+      this.$log.debug('clicked on person id: ' + person.id);
+      this.$location.path('/PersonDetail/' + person.id);
     }
 
     load() {

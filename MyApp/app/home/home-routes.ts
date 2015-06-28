@@ -4,7 +4,7 @@ module home {
 
   angular
     .module('home')
-    .config(config)
+    .config(config);
 
   function config($routeProvider: ng.route.IRouteProvider) {
     $routeProvider
@@ -12,6 +12,11 @@ module home {
         templateUrl: 'home/views/home.tpl.html',
         controller: 'HomeCtrl',
         controllerAs: 'home'
+      })
+      .when('/PersonDetail/:personId', {
+        templateUrl: 'home/views/person-detail.tpl.html',
+        controller: 'PersonDetailCtrl',
+        controllerAs: 'personDetail'
       });
   }
 }

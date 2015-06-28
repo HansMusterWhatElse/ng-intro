@@ -13,13 +13,15 @@ Filtern: <input type="text" ng-model="home.query" />
         <th>Name</th>
         <th>Vorname</th>
         <th>EMail</th>
+        <th>&nbsp;</th>
     </tr>
     </thead>
     <tbody>
-    <tr ng-repeat="person in home.persons | filter: home.query">
+    <tr ng-repeat="person in home.persons | filter: home.query" ng-click="home.showDetail(person)">
         <td>{{person.name}}</td>
         <td>{{person.prename}}</td>
         <td>{{person.email}}</td>
+        <td><a href="#/PersonDetail/{{person.id}}">Detail</a></td>
     </tr>
     </tbody>
 </table>
