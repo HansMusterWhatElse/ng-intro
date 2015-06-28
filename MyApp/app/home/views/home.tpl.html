@@ -1,2 +1,22 @@
 <h2>home</h2>
 <p>{{home.ctrlName}}</p>
+
+<input type="button" value="load data.." ng-click="home.load()" />
+<br />
+<br />
+<table class="table table-bordered table-striped table-hover">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Vorname</th>
+        <th>EMail</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="person in home.persons">
+        <td>{{person.name}}</td>
+        <td>{{person.prename}}</td>
+        <td>{{person.email}}</td>
+    </tr>
+    </tbody>
+</table>

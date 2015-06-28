@@ -5,11 +5,8 @@ module Home.Controllers {
   class HomeCtrl {
 
     ctrlName: string;
+    persons : Array<Home.Data.IPerson>;
 
-    // $inject annotation.
-    // It provides $injector with information about dependencies to be injected into constructor
-    // it is better to have it close to the constructor, because the parameters must match in count and type.
-    // See http://docs.angularjs.org/guide/di
     public static $inject = ['$log'];
 
     // dependencies are injected via AngularJS $injector
@@ -18,6 +15,18 @@ module Home.Controllers {
       vm.ctrlName = 'HomeCtrl';
 
       this.$log.debug('home controller called');
+    }
+
+    load() {
+
+      this.persons = [
+        { "id": 1, "name": "Hoegger", "prename": "Andreas", "email": "ha@test.com" },
+        { "id": 2, "name": "Dietrich", "prename": "Benno", "email": "db@test.ch" },
+        { "id": 3, "name": "Koeferli", "prename": "Bruno", "email": "kb@test.com" }
+      ];
+
+      this.$log.debug('load clicked');
+
     }
   }
 
