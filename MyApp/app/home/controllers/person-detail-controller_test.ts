@@ -12,8 +12,8 @@ describe('PersonDetailCtrl', function () {
     ctrl = $controller('PersonDetailCtrl');
   }));
 
-  it('should have ctrlName as PersonDetailCtrl', function () {
-    expect(ctrl.ctrlName).toEqual('PersonDetailCtrl');
-  });
+  //it('should have ctrlName as PersonDetailCtrl', function () {
+  //  expect(ctrl.ctrlName).toEqual('PersonDetailCtrl');
+  //});
 
 });

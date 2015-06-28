@@ -14,9 +14,9 @@ describe('time', function () {
     element = $compile(angular.element('<time></time>'))(scope);
   }));
 
-  it('should have correct text', function () {
-    scope.$apply();
-    expect(element.isolateScope().time.name).toEqual('time');
-  });
+  //it('should have correct text', function () {
+  //  scope.$apply();
+  //  expect(element.isolateScope().time.name).toEqual('time');
+  //});
 
 });

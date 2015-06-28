@@ -4,15 +4,12 @@ module Home.Controllers {
 
   class HomeCtrl {
 
-    ctrlName: string;
     persons : Array<Home.Data.IPerson>;
     query: string;
 
     public static $inject = ['$log', '$location', '$http', 'Repository'];
 
     constructor(private $log : ng.ILogService, private $location : ng.ILocationService, private $http : ng.IHttpService, private repository : Home.Services.IRepository) {
-      var vm = this;
-      vm.ctrlName = 'HomeCtrl';
 
       this.persons = this.repository.getPersons();
 

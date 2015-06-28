@@ -12,8 +12,8 @@ describe('Repository', function () {
     service = Repository;
   }));
 
-  it('should equal Repository', function () {
-    expect(service.get()).toEqual('Repository');
-  });
+  //it('should equal Repository', function () {
+  //  expect(service.get()).toEqual('Repository');
+  //});
 
 });

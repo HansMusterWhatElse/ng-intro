@@ -11,9 +11,5 @@ describe('HomeCtrl', function () {
   beforeEach(inject(function ($rootScope, $controller) {
     ctrl = $controller('HomeCtrl');
   }));
-
-  it('should have ctrlName as HomeCtrl', function () {
-    expect(ctrl.ctrlName).toEqual('HomeCtrl');
-  });
-
+    
 });
