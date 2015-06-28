@@ -1,0 +1,22 @@
+[
+  { "id": 1, "name": "Hoegger", "prename": "Andreas", "email": "ha@test.com" },
+  { "id": 2, "name": "Dietrich", "prename": "Benno", "email": "db@test.ch" },
+  { "id": 3, "name": "Koeferli", "prename": "Bruno", "email": "kb@test.com.com" },
+  { "id": 4, "name": "Guglielmo", "prename": "Claudio", "email": "gc@test.com" },
+  { "id": 5, "name": "Heller", "prename": "Dominik", "email": "hd@test.com" },
+  { "id": 6, "name": "Albertin", "prename": "Fabio", "email": "af@test.com" },
+  { "id": 7, "name": "Rast", "prename": "Franca", "email": "rf@test.com" },
+  { "id": 8, "name": "Heymanns", "prename": "Holger", "email": "hh@test.com" },
+  { "id": 9, "name": "Eggers", "prename": "Jan", "email": "ej@test.com" },
+  { "id": 10, "name": "Schefer", "prename": "Kilian", "email": "sk@test.name" },
+  { "id": 11, "name": "Muller", "prename": "Lisa", "email": "ml@test.com" },
+  { "id": 12, "name": "Wirrer", "prename": "Markus", "email": "wm@test.com" },
+  { "id": 13, "name": "Linggi", "prename": "Martin", "email": "lm@test.ch" },
+  { "id": 14, "name": "Schmid", "prename": "Michael", "email": "sm@test.me" },
+  { "id": 15, "name": "Bosshard", "prename": "Nicole", "email": "bn@test.ch" },
+  { "id": 16, "name": "Gfeller", "prename": "Philipp", "email": "gp@test.ch" },
+  { "id": 17, "name": "Bieri", "prename": "Rolf", "email": "br@test.ch" },
+  { "id": 18, "name": "Stutz", "prename": "Rolf", "email": "sr@test.net" },
+  { "id": 19, "name": "Stanic", "prename": "Sascha", "email": "ss@test.net" },
+  { "id": 20, "name": "Solenthaler", "prename": "Thomas", "email": "st@test.com" }
+]

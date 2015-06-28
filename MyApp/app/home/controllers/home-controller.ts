@@ -8,10 +8,10 @@ module Home.Controllers {
     persons : Array<Home.Data.IPerson>;
     query: string;
 
-    public static $inject = ['$log', '$location'];
+    public static $inject = ['$log', '$location', '$http'];
 
     // dependencies are injected via AngularJS $injector
-    constructor(private $log : ng.ILogService, private $location : ng.ILocationService) {
+    constructor(private $log : ng.ILogService, private $location : ng.ILocationService, private $http : ng.IHttpService) {
       var vm = this;
       vm.ctrlName = 'HomeCtrl';
 
@@ -25,11 +25,10 @@ module Home.Controllers {
 
     load() {
 
-      this.persons = [
-        { "id": 1, "name": "Hoegger", "prename": "Andreas", "email": "ha@test.com" },
-        { "id": 2, "name": "Dietrich", "prename": "Benno", "email": "db@test.ch" },
-        { "id": 3, "name": "Koeferli", "prename": "Bruno", "email": "kb@test.com" }
-      ];
+      this.$http.get('/data/data.json').then((data : any) =>
+      {
+        this.persons = data.data;
+      });
 
       this.$log.debug('load clicked');
 
