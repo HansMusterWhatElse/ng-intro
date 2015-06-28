@@ -21,7 +21,7 @@ module Home.Services {
 
             if (!this.personData) {
                 this.$http.get('/data/data.json').then((data) => {
-                    this.personData = data.data;
+                    this.personData = <Array<Home.Data.IPerson>> data.data;
                     deferred.resolve(this.personData);
                 });
             } else {

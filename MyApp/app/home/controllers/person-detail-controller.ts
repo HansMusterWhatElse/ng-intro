@@ -19,7 +19,7 @@ module Home.PersonDetailCtrl {
       var vm = this;
       vm.ctrlName = 'PersonDetailCtrl';
 
-      this.person = repository.getPerson(<number>$routeParams.personId);
+      this.person = repository.getPerson(parseInt($routeParams.personId));
     }
 
 
