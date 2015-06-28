@@ -6,6 +6,7 @@ module Home.Controllers {
 
     ctrlName: string;
     persons : Array<Home.Data.IPerson>;
+    query: string;
 
     public static $inject = ['$log'];
 
