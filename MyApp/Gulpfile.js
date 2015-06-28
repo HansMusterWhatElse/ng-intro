@@ -32,6 +32,7 @@ config.appFiles = path.join(config.appDir, '**/*');
 config.appFontFiles = path.join(config.appDir, 'fonts/**/*');
 config.appImageFiles = path.join(config.appDir, 'images/**/*');
 config.appMarkupFiles = path.join(config.appDir, '**/*.{haml,html,jade}');
+config.appDataFiles = path.join(config.appDir, 'home/data/**/*.json');
 config.appScriptFiles = path.join(config.appDir, '**/*.{coffee,es6,js,ts}');
 config.appStyleFiles = path.join(config.appDir, '**/*.{css,less,scss,styl}');
 
