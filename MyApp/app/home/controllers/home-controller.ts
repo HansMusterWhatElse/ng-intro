@@ -8,12 +8,13 @@ module Home.Controllers {
     persons : Array<Home.Data.IPerson>;
     query: string;
 
-    public static $inject = ['$log', '$location', '$http'];
+    public static $inject = ['$log', '$location', '$http', 'Repository'];
 
-    // dependencies are injected via AngularJS $injector
-    constructor(private $log : ng.ILogService, private $location : ng.ILocationService, private $http : ng.IHttpService) {
+    constructor(private $log : ng.ILogService, private $location : ng.ILocationService, private $http : ng.IHttpService, private repository : Home.Services.IRepository) {
       var vm = this;
       vm.ctrlName = 'HomeCtrl';
+
+      this.persons = this.repository.getPersons();
 
       this.$log.debug('home controller called');
     }
@@ -23,16 +24,6 @@ module Home.Controllers {
       this.$location.path('/PersonDetail/' + person.id);
     }
 
-    load() {
-
-      this.$http.get('/data/data.json').then((data : any) =>
-      {
-        this.persons = data.data;
-      });
-
-      this.$log.debug('load clicked');
-
-    }
   }
 
 

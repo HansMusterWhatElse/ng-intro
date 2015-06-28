@@ -12,19 +12,14 @@ module Home.PersonDetailCtrl {
     personId: string;
     person: Home.Data.IPerson;
 
-    public static $inject = ['$routeParams', '$http'];
+    public static $inject = ['$routeParams', '$http', 'Repository'];
 
     // dependencies are injected via AngularJS $injector
-    constructor($routeParams : IPersonalDetailRouteParams, private $http : ng.IHttpService) {
+    constructor($routeParams : IPersonalDetailRouteParams, private $http : ng.IHttpService, private repository : Home.Services.IRepository) {
       var vm = this;
       vm.ctrlName = 'PersonDetailCtrl';
 
-      this.personId = $routeParams.personId;
-
-      this.$http.get('/data/data.json').then((data : any) =>
-      {
-        this.person = data.data[this.personId - 1];
-      });
+      this.person = repository.getPerson(<number>$routeParams.personId);
     }
 
 

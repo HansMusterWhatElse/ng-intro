@@ -11,12 +11,22 @@ module home {
       .when('/home', {
         templateUrl: 'home/views/home.tpl.html',
         controller: 'HomeCtrl',
-        controllerAs: 'home'
+        controllerAs: 'home',
+          resolve: {
+            'Something': ['Repository', function (Repository: Home.Services.IRepository) {
+              return Repository.loadPersonData();
+            }]
+          }
       })
       .when('/PersonDetail/:personId', {
         templateUrl: 'home/views/person-detail.tpl.html',
         controller: 'PersonDetailCtrl',
-        controllerAs: 'personDetail'
+        controllerAs: 'personDetail',
+          resolve: {
+            'Something': ['Repository', function (Repository: Home.Services.IRepository) {
+              return Repository.loadPersonData();
+            }]
+          }
       });
   }
 }
