@@ -23,6 +23,7 @@ module Home.Directive {
         var format : string = 'd.M.yyyy H:mm:ss';
 
         var dateFilter = $filter('date');
+        updateTime();
 
         function updateTime() {
           element.text(dateFilter(new Date(), format));
